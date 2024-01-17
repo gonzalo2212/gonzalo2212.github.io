@@ -1,0 +1,86 @@
+{
+    "header": {
+        "title": "Var Innovations",
+        "solutions": "Solutions",
+        "solutions_automation": "Automation Solutions",
+        "solutions_digital_transformation": "Digital Transformation",
+        "solutions_ml_ai": "Machine Learning & AI",
+        "solutions_data_analysis": "Data Analysis Services",
+        "resources": "Resources",
+        "resources_blog": "Blog",
+        "resources_case_studies": "Case Studies",
+        "resources_white_papers": "White Papers",
+        "resources_events": "Events",
+        "company": "Company",
+        "company_about_us": "About Us",
+        "company_team": "Team",
+        "company_partnerships": "Partnerships",
+        "company_dei_statement": "DEI Statement",
+        "insights": "Insights",
+        "careers": "Careers",
+        "contact_us": "Contact Us"
+    },
+    "main": {
+        "hero": {
+            "title": "Empowering Digital Transformation",
+            "subtitle": "Harness the Full Spectrum of Technology with Var Innovations.",
+            "button": "Our Services"
+        },
+        "mission": {
+            "title": "Our Mission",
+            "subtitle": "Propelling You Into the Digital Future",
+            "description": "At Var Innovations, we are dedicated to propelling businesses and individuals into the future through seamless digital transformation. We understand the pivotal role of technology in the modern world and are here to ensure that you fully utilize the digital tools at your disposal."
+        },
+        "offer": {
+            "title": "What We Offer",
+            "subtitle": "Our services are centered around automation and digitization, with a special emphasis on:",
+            "ml_ai": {
+                "title": "Machine Learning & AI",
+                "description": "Implement cutting-edge machine learning and artificial intelligence solutions to streamline business operations and enhance decision-making.",
+                "learn_more": "Learn More →"
+            },
+            "digital_transition": {
+                "title": "Digital Transition",
+                "description": "Facilitate the shift from analog processes to digital platforms, making your business more efficient, scalable, and ready for the challenges of tomorrow.",
+                "learn_more": "Learn More →"
+            },
+            "data_analysis": {
+                "title": "Data Analysis",
+                "description": "Utilize advanced data analysis techniques to optimize operations, identify hidden opportunities, and preemptively address potential issues.",
+                "learn_more": "Learn More →"
+            },
+            "custom_solutions": {
+                "title": "Custom Solutions",
+                "description": "Tailored services that align with your unique business needs, ensuring that your transition to the digital realm is smooth and advantageous.",
+                "learn_more": "Learn More →"
+            }
+        },
+        "why_var": {
+            "title": "Why Var Innovations?",
+            "expertise_title": "Expertise",
+            "expertise_description": "Our team of experts specializes in the latest technological advancements and is committed to delivering exceptional service.",
+            "innovation_title": "Innovation",
+            "innovation_description": "We don't just follow trends; we set them by continuously exploring novel applications of technology in business.",
+            "support_title": "Support",
+            "support_description": "We believe in building lasting relationships with our clients, providing ongoing support and guidance through every step of their digital journey."
+        }
+    },
+    "footer": {
+        "quick_links": "Quick Links",
+        "home": "Home",
+        "solutions": "Solutions",
+        "resources": "Resources",
+        "about_us": "About Us",
+        "contact_us": "Contact Us",
+        "contact": "Contact",
+        "address_line1": "Var Innovations.",
+        "address_line2": "San Juan, Argentina",
+        "phone": "Phone: +54 264 501 5860",
+        "email": "vargasinformatica22@gmail.com",
+        "follow_us": "Follow Us",
+        "terms_of_service": "Terms of Service",
+        "privacy_policy": "Privacy Policy",
+        "accessibility_statement": "Accessibility Statement",
+        "copy_right": "© 2023 Var Innovations. All rights reserved."
+    }
+}

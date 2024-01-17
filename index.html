@@ -1,65 +1,282 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Survey Form</title>
+    <title>Var Innovations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Include i18next library from CDN -->
+    <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
 </head>
 
-<body>
-    <main id="main">
-        <h1 id="title">Aspiring Developer Survey</h1>
-        <p id="description">Thank you for letting us know more about future developers.</p>
-        <form id="survey-form">
-            <label id="name-label" for="name">Name</label>
-            <input type="text" name="name" id="name" required placeholder="Enter your name">
 
-            <label id="email-label" for="email">Email</label>
-            <input type="email" name="email" id="email" required placeholder="Enter your Email">
+<body class="bg-black">
+    <header class="fixed top-0 left-0 w-full z-50">
+        <nav class="py-5">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-white text-3xl" data-i18n="header.title">Var Innovations</h1>
+                <ul class="text-white flex space-x-4 items-center">
+                    <li class="group relative">
+                        <a href="#" class="hover:text-gray-300" data-i18n="header.solutions">Solutions</a>
+                        <div class="absolute hidden group-hover:block bg-gray-700 pt-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.solutions_automation">Automation Solutions</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.solutions_digital_transformation">Digital Transformation</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.solutions_ml_ai">Machine Learning & AI</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.solutions_data_analysis">Data Analysis Services</a>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="hover:text-gray-300" data-i18n="header.resources">Resources</a>
+                        <div class="absolute hidden group-hover:block bg-gray-700 pt-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.resources_blog">Blog</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.resources_case_studies">Case Studies</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.resources_white_papers">White Papers</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.resources_events">Events</a>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="hover:text-gray-300" data-i18n="header.company">Company</a>
+                        <div class="absolute hidden group-hover:block bg-gray-700 pt-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.company_about_us">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.company_team">Team</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.company_partnerships">Partnerships</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600"
+                                data-i18n="header.company_dei_statement">DEI Statement</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-gray-300" data-i18n="header.insights">Insights</a></li>
+                    <li><a href="#" class="hover:text-gray-300" data-i18n="header.careers">Careers</a></li>
+                    <li><a href="#" class="hover:text-gray-300" data-i18n="header.contact_us">Contact Us</a></li>
+                    <li>
+                        <select id="languageSwitcher" class="bg-gray-800 text-white text-sm rounded border border-gray-600 hover:bg-gray-600 px-3 py-2 shadow cursor-pointer focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50 transition-colors duration-200">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-            <label id="number-label" for="number">Age</label>
-            <input type="number" name="number" id="number" min="1" max="120" placeholder="Enter your age">
+    <div class="fondo">
+        <div class="blue-gradient" data-framer-name="Blue" name="Blue"></div>
+        <div class="pink-gradient" data-framer-name="Pink" name="Pink"></div>
+        <div class="purple-gradient" data-framer-name="Purple" name="Purple"></div>
+    </div>
 
-            <label for="dropdown">What is your ocupation?</label>
-            <select name="dropdown" id="dropdown">
-                <option disabled selected>Select a Ocupation</option>
-                <option value="worker">Worker</option>
-                <option value="student">Student</option>
-                <option value="unemployed">Unemployed</option>
-                <option value="unemployed">Other</option>
-            </select>
+    <main>
+        <section id="hero-section" class="text-white text-center pt-48 pb-24">
+            <h2 class="text-6xl font-bold mb-4" data-i18n="main.hero.title">Empowering Digital Transformation</h2>
+            <p class="text-xl mb-8" data-i18n="main.hero.subtitle">Harness the Full Spectrum of Technology with Var
+                Innovations.</p>
+            <a href="#" class="btn-green" data-i18n="main.hero.button">Our Services <i
+                    class="fas fa-arrow-right"></i></a>
+        </section>
 
-            <fieldset>
-                <legend>Would you recomend this career to a friend?</legend>
-                <input type="radio" name="items" id="option1" value="option1">
-                <label for="option1">Yes</label><br>
-                <input type="radio" name="items" id="option2" value="option2">
-                <label for="option2">No</label><br>
-                <input type="radio" name="items" id="option3" value="option3">
-                <label for="option3">Not sure</label><br>
-            </fieldset>
+        <!-- Our Mission - Section -->
+        <section class="py-12 md:py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="font-bold text-6xl text-white mb-4" data-i18n="main.mission.title">Our Mission</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-6" data-i18n="main.mission.subtitle">Propelling
+                    You Into the Digital Future</h3>
+                <p class="text-lg md:text-xl text-white leading-relaxed max-w-2xl mx-auto"
+                    data-i18n="main.mission.description">
+                    At Var Innovations, we are dedicated to propelling businesses and individuals into the future
+                    through seamless digital transformation. We understand the pivotal role of technology in the modern
+                    world and are here to ensure that you fully utilize the digital tools at your disposal.
+                </p>
+            </div>
+        </section>
 
-            <fieldset>
-                <legend>What kind of project are you interested on?</legend>
-                <input type="checkbox" name="improves" id="Front-end Projects" value="Front-end Projects">
-                <label for="Front-end Projects">Front-end Projects</label><br>
-                <input type="checkbox" name="improves" id="Back-end Projects" value="Back-end Projects">
-                <label for="Back-end Projects">Back-end Projects</label><br>
-                <input type="checkbox" name="improves" id="Data Visualization" value="Data Visualization">
-                <label for="Data Visualization">Data Visualization</label><br>
-                <input type="checkbox" name="improves" id="Others" value="Others">
-                <label for="Others">Others</label><br>
-            </fieldset>
+        <!-- What we Offer - Section -->
+        <section class="text-white py-10 px-6 min-h-screen flex flex-col justify-center">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold mb-4 text-center" style="font-family: 'Poppins', sans-serif;"
+                    data-i18n="main.offer.title">What We Offer</h2>
+                <p class="mb-6 text-xl text-center" style="font-family: 'Roboto', sans-serif;"
+                    data-i18n="main.offer.subtitle">Our services are centered around automation and digitization, with a
+                    special emphasis on:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Machine Learning & AI Card -->
+                    <div class="card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <i class="fas fa-robot text-indigo-400 fa-3x mb-4"></i>
+                            <h3 class="font-bold text-xl mb-2 text-indigo-300" data-i18n="main.offer.ml_ai.title">
+                                Machine Learning & AI</h3>
+                            <p class="text-gray-400 text-base" data-i18n="main.offer.ml_ai.description">
+                                Implement cutting-edge machine learning and artificial intelligence solutions to
+                                streamline business operations and enhance decision-making.
+                            </p>
+                        </div>
+                        <div class="bg-gray-900 p-4">
+                            <a href="#" class="text-indigo-300 hover:text-indigo-500 font-bold"
+                                data-i18n="main.offer.ml_ai.learn_more">Learn More →</a>
+                        </div>
+                    </div>
 
-            <label for="comments">Leave a comment</label>
-            <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Write your comment here"></textarea>
+                    <!-- Digital Transition Card -->
+                    <div class="card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <i class="fas fa-digital-tachograph text-green-400 fa-3x mb-4"></i>
+                            <h3 class="font-bold text-xl mb-2 text-green-300"
+                                data-i18n="main.offer.digital_transition.title">Digital Transition</h3>
+                            <p class="text-gray-400 text-base" data-i18n="main.offer.digital_transition.description">
+                                Facilitate the shift from analog processes to digital platforms, making your business
+                                more efficient, scalable, and ready for the challenges of tomorrow.
+                            </p>
+                        </div>
+                        <div class="bg-gray-900 p-4">
+                            <a href="#" class="text-green-300 hover:text-green-500 font-bold"
+                                data-i18n="main.offer.digital_transition.learn_more">Learn More →</a>
+                        </div>
+                    </div>
 
-            <button id="submit" type="submit">Send</button>
-        </form>
+                    <!-- Data Analysis Card -->
+                    <div class="card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <i class="fas fa-chart-line text-purple-400 fa-3x mb-4"></i>
+                            <h3 class="font-bold text-xl mb-2 text-purple-300"
+                                data-i18n="main.offer.data_analysis.title">Data Analysis</h3>
+                            <p class="text-gray-400 text-base" data-i18n="main.offer.data_analysis.description">
+                                Utilize advanced data analysis techniques to optimize operations, identify hidden
+                                opportunities, and preemptively address potential issues.
+                            </p>
+                        </div>
+                        <div class="bg-gray-900 p-4">
+                            <a href="#" class="text-purple-300 hover:text-purple-500 font-bold"
+                                data-i18n="main.offer.data_analysis.learn_more">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Custom Solutions Card -->
+                    <div class="card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <i class="fas fa-cogs text-red-400 fa-3x mb-4"></i>
+                            <h3 class="font-bold text-xl mb-2 text-red-300"
+                                data-i18n="main.offer.custom_solutions.title">Custom Solutions</h3>
+                            <p class="text-gray-400 text-base" data-i18n="main.offer.custom_solutions.description">
+                                Tailored services that align with your unique business needs, ensuring that your
+                                transition to the digital realm is smooth and advantageous.
+                            </p>
+                        </div>
+                        <div class="bg-gray-900 p-4">
+                            <a href="#" class="text-red-300 hover:text-red-500 font-bold"
+                                data-i18n="main.offer.custom_solutions.learn_more">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Var Innovations? - Section -->
+        <section class="text-white py-10 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center" data-i18n="main.why_var.title">Why Var Innovations?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Expertise Card -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <i class="fas fa-brain text-indigo-400 fa-3x mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="main.why_var.expertise_title">Expertise</h3>
+                        <p class="text-gray-400 text-center" data-i18n="main.why_var.expertise_description">
+                            Our team of experts specializes in the latest technological advancements and is committed to
+                            delivering exceptional service.
+                        </p>
+                    </div>
+
+                    <!-- Innovation Card -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <i class="fas fa-lightbulb text-green-400 fa-3x mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="main.why_var.innovation_title">Innovation</h3>
+                        <p class="text-gray-400 text-center" data-i18n="main.why_var.innovation_description">We don't
+                            just follow trends; we set them by continuously exploring novel applications of technology
+                            in business.
+                        </p>
+                    </div>
+
+                    <!-- Support Card -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <i class="fas fa-hands-helping text-purple-400 fa-3x mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="main.why_var.support_title">Support</h3>
+                        <p class="text-gray-400 text-center" data-i18n="main.why_var.support_description">
+                            We believe in building lasting relationships with our clients, providing ongoing support and
+                            guidance through every step of their digital journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer class="py-10 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="uppercase mb-2 font-bold" data-i18n="footer.quick_links">Quick Links</h5>
+                    <ul>
+                        <li><a href="#" class="hover:text-gray-300" data-i18n="footer.home">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-300" data-i18n="footer.solutions">Solutions</a></li>
+                        <li><a href="#" class="hover:text-gray-300" data-i18n="footer.resources">Resources</a></li>
+                        <li><a href="#" class="hover:text-gray-300" data-i18n="footer.about_us">About Us</a></li>
+                        <li><a href="#" class="hover:text-gray-300" data-i18n="footer.contact_us">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h5 class="uppercase mb-2 font-bold" data-i18n="footer.contact">Contact</h5>
+                    <p data-i18n="footer.address_line1">Var Innovations Inc.</p>
+                    <p data-i18n="footer.address_line2">123 Tech Avenue, Innovation City</p>
+                    <p data-i18n="footer.phone">Phone: +1 234 567 8900</p>
+                    <p>Email: <a href="mailto:contact@varinnovations.com" class="hover:text-gray-300"
+                            data-i18n="footer.email">contact@varinnovations.com</a></p>
+                </div>
+                <!-- Social Media Icons -->
+                <div>
+                    <h5 class="uppercase mb-2 font-bold" data-i18n="footer.follow_us">Follow Us</h5>
+                    <div class="flex">
+                        <a href="#" class="mr-2"><i class="fab fa-linkedin-in hover:text-gray-300"></i></a>
+                        <a href="#" class="mr-2"><i class="fab fa-twitter hover:text-gray-300"></i></a>
+                        <a href="#" class="mr-2"><i class="fab fa-facebook-f hover:text-gray-300"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Section & Certifications -->
+            <div class="flex flex-wrap justify-between items-center mt-8 border-t border-gray-700 pt-4">
+                <ul class="flex flex-wrap">
+                    <li><a href="#" class="text-xs hover:text-gray-300 mr-4" data-i18n="footer.terms_of_service">Terms
+                            of Service</a></li>
+                    <li><a href="#" class="text-xs hover:text-gray-300 mr-4" data-i18n="footer.privacy_policy">Privacy
+                            Policy</a></li>
+                    <li><a href="#" class="text-xs hover:text-gray-300"
+                            data-i18n="footer.accessibility_statement">Accessibility Statement</a></li>
+                </ul>
+                <div>
+                    <p class="text-xs inline-block" data-i18n="footer.copy_right">© 2023 Var Innovations. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include your custom script -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

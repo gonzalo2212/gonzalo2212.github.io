@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    backdrop-filter:blur(20px);
+    background-color:rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter:blur(20px);
+    max-width:100%;
+    width:100%;
+    opacity:1;
+}
+
+/* #hero-section {
+    background-image: url('https://ik.imagekit.io/freeflo/production/829989f0-9eaa-4f8e-a59b-3e82fe021148.png?tr=w-1920,q-75&alt=media&pr-true');
+    background-size: cover;
+    background-position: center;
+} */
+.btn-green {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.azul {
+    left: 64px;
+    top: 1196px;
+    right: unset;
+    position: absolute;
+}
+
+.morado {
+    left: -776px;
+    top: 1140px;
+    position: absolute;
+}
+
+/* Background */
+.blue-gradient {
+    flex: none;
+    height: auto;
+    left: 732px;
+    position: absolute;
+    top: 0px;
+    width: auto;
+    background: radial-gradient(50% 50% at 70% 20%, rgba(92, 195, 250, 0.28) 0%, rgba(92, 195, 250, 0) 100%); 
+    opacity: 0.7; 
+    width: 1845px; 
+    height: 1230px;
+}
+
+.pink-gradient {
+    flex: none;
+    height: auto;
+    left: 231px;
+    position: absolute;
+    top: 416px;
+    width: auto;
+    background: radial-gradient(50% 50% at 50% 70%, rgba(250, 117, 248, 0.28) 0%, rgba(250, 117, 248, 0) 100%); 
+    opacity: 0.7; 
+    width: 1845px; 
+    height: 1230px;
+}
+
+.purple-gradient {
+    flex: none;
+    height: auto;
+    left: -850px;
+    position: absolute;
+    top: 16px;
+    width: auto;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(158, 110, 230, 0.28) 0%, rgba(158, 110, 230, 0) 100%); 
+    opacity: 0.8; 
+    width: 1845px; 
+    height: 1230px;
+}
+
+/* Cards  */
+.card {
+    backdrop-filter: blur(2px); /* Apply a blur effect */
+    background-clip: padding-box; /* Restrict the background to the padding area */
+    background-color: rgba(255, 255, 255, 0.062); /* Semi-transparent white background */
+   }
+   

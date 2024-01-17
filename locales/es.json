@@ -1,0 +1,86 @@
+{
+    "header": {
+        "title": "Var Innovations",
+        "solutions": "Soluciones",
+        "solutions_automation": "Soluciones de Automatización",
+        "solutions_digital_transformation": "Transformación Digital",
+        "solutions_ml_ai": "Aprendizaje Automático & IA",
+        "solutions_data_analysis": "Servicios de Análisis de Datos",
+        "resources": "Recursos",
+        "resources_blog": "Blog",
+        "resources_case_studies": "Estudios de Caso",
+        "resources_white_papers": "Documentos Técnicos",
+        "resources_events": "Eventos",
+        "company": "Empresa",
+        "company_about_us": "Sobre Nosotros",
+        "company_team": "Equipo",
+        "company_partnerships": "Alianzas",
+        "company_dei_statement": "Declaración DEI",
+        "insights": "Perspectivas",
+        "careers": "Carreras",
+        "contact_us": "Contáctanos"
+    },
+    "main": {
+        "hero": {
+            "title": "Potenciando la Transformación Digital",
+            "subtitle": "Aprovecha todo el espectro de la tecnología con Var Innovations.",
+            "button": "Nuestros Servicios"
+        },
+        "mission": {
+            "title": "Nuestra Misión",
+            "subtitle": "Impulsándote hacia el Futuro Digital",
+            "description": "En Var Innovations, estamos dedicados a impulsar a empresas e individuos hacia el futuro mediante una transformación digital sin contratiempos. Entendemos el papel fundamental de la tecnología en el mundo moderno y estamos aquí para asegurar que aproveches completamente las herramientas digitales a tu disposición."
+        },
+        "offer": {
+            "title": "Lo que Ofrecemos",
+            "subtitle": "Nuestros servicios se centran en la automatización y digitalización, con un énfasis especial en:",
+            "ml_ai": {
+                "title": "Aprendizaje Automático & IA",
+                "description": "Implementa soluciones de vanguardia en aprendizaje automático e inteligencia artificial para agilizar las operaciones empresariales y mejorar la toma de decisiones.",
+                "learn_more": "Aprende Más →"
+            },
+            "digital_transition": {
+                "title": "Transición Digital",
+                "description": "Facilita el cambio de procesos analógicos a plataformas digitales, haciendo que tu negocio sea más eficiente, escalable y preparado para los desafíos del mañana.",
+                "learn_more": "Aprende Más →"
+            },
+            "data_analysis": {
+                "title": "Análisis de Datos",
+                "description": "Utiliza técnicas avanzadas de análisis de datos para optimizar operaciones, identificar oportunidades ocultas y abordar de manera preventiva posibles problemas.",
+                "learn_more": "Aprende Más →"
+            },
+            "custom_solutions": {
+                "title": "Soluciones Personalizadas",
+                "description": "Servicios a medida que se alinean con las necesidades únicas de tu negocio, asegurando que tu transición al ámbito digital sea suave y ventajosa.",
+                "learn_more": "Aprende Más →"
+            }
+        },
+        "why_var": {
+            "title": "¿Por qué Var Innovations?",
+            "expertise_title": "Experiencia",
+            "expertise_description": "Nuestro equipo de expertos se especializa en los últimos avances tecnológicos y está comprometido a ofrecer un servicio excepcional.",
+            "innovation_title": "Innovación",
+            "innovation_description": "No solo seguimos tendencias; las establecemos explorando continuamente aplicaciones novedosas de la tecnología en los negocios.",
+            "support_title": "Soporte",
+            "support_description": "Creemos en construir relaciones duraderas con nuestros clientes, proporcionando apoyo y orientación continuos en cada paso de su viaje digital."
+        }
+    },
+    "footer": {
+        "quick_links": "Enlaces Rápidos",
+        "home": "Inicio",
+        "solutions": "Soluciones",
+        "resources": "Recursos",
+        "about_us": "Sobre Nosotros",
+        "contact_us": "Contáctanos",
+        "contact": "Contacto",
+        "address_line1": "Var Innovations.",
+        "address_line2": "San Juan, Argentina",
+        "phone": "Teléfono: +54 264 501 5860",
+        "email": "vargasinformatica22@gmail.com",
+        "follow_us": "Síguenos",
+        "terms_of_service": "Términos de Servicio",
+        "privacy_policy": "Política de Privacidad",
+        "accessibility_statement": "Declaración de Accesibilidad",
+        "copy_right": "© 2023 Var Innovations. Todos los derechos reservados."
+    }
+}
