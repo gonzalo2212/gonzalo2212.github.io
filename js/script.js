@@ -1,57 +1,61 @@
 // Function to initialize i18next
 async function initI18Next() {
+  try {
     const enTranslations = await loadTranslations('en');
     const esTranslations = await loadTranslations('es');
-  
-    i18next.init({
+
+    await i18next.init({
       lng: 'en', // default language
       resources: {
-        en: {
-          translation: enTranslations
-        },
-        es: {
-          translation: esTranslations
-        }
+        en: { translation: enTranslations },
+        es: { translation: esTranslations }
       }
-    }, function(err, t) {
-      // Initialize your application or update content
-      updateContent();
     });
+
+    // Once initialization is done, handle automatic language detection
+    const userLang = navigator.language || navigator.userLanguage;
+    changeLanguage(userLang.includes("es") ? 'es' : 'en');
+  } catch (error) {
+    console.error('Failed to initialize i18next:', error);
   }
-  
-  // Function to update the content of your webpage based on the selected language
-  function updateContent() {
-    // Loop over all elements with a 'data-i18n' attribute and set their content
-    document.querySelectorAll('[data-i18n]').forEach(function(elem) {
-      var key = elem.getAttribute('data-i18n');
-      elem.innerHTML = i18next.t(key);
-    });
+}
+
+function updateLanguageSelector() {
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  if (languageSwitcher) {
+    languageSwitcher.value = i18next.language;
   }
-  
-  // Call the init function to start the i18next setup
-  initI18Next();
-  
-  // Function to handle automatic language detection on window load
-  window.onload = function() {
-    var userLang = navigator.language || navigator.userLanguage;
-    if(userLang.includes("es")) {
-      i18next.changeLanguage('es');
-    } else {
-      i18next.changeLanguage('en');
-    }
-  };
-  
-  // Add an event listener to your language switcher element
-  document.getElementById('languageSwitcher').addEventListener('change', function(event) {
-    i18next.changeLanguage(event.target.value, function(err, t) {
-      // Update the content again to reflect the language change
-      updateContent();
-    });
+}
+
+function updateContent() {
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(elem => {
+    const key = elem.getAttribute('data-i18n');
+    elem.textContent = i18next.t(key); // Changed from innerHTML to textContent
   });
-  
-  // Function to load translations for a given language
-  async function loadTranslations(language) {
-    const response = await fetch(`locales/${language}.json`);
-    return await response.json();
+}
+
+// Function to change the language and update content and selector
+async function changeLanguage(lang) {
+  await i18next.changeLanguage(lang);
+  try {
+    updateContent(); // Updating the content
+    updateLanguageSelector(); // Updating the language selector
+  } catch (error) {
+    console.error('Error updating content and language selector:', error);
   }
-  
+}
+
+// Function to load translations for a given language
+async function loadTranslations(language) {
+  const response = await fetch(`locales/${language}.json`);
+  return await response.json(); 
+}
+
+// Event listener for the language switcher
+document.getElementById('languageSwitcher').addEventListener('change', event => {
+  changeLanguage(event.target.value);
+});
+
+// Initiate i18next setup and handle language detection on window load
+window.addEventListener('load', initI18Next);
