@@ -59,3 +59,11 @@ document.getElementById('languageSwitcher').addEventListener('change', event => 
 
 // Initiate i18next setup and handle language detection on window load
 window.addEventListener('load', initI18Next);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  navToggle.addEventListener('click', function() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.classList.toggle('hidden');
+  });
+});

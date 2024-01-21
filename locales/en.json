@@ -1,6 +1,7 @@
 {
     "header": {
         "title": "Var Innovations",
+        "services":"Services",
         "solutions": "Solutions",
         "solutions_automation": "Automation Solutions",
         "solutions_digital_transformation": "Digital Transformation",
@@ -12,7 +13,7 @@
         "resources_white_papers": "White Papers",
         "resources_events": "Events",
         "company": "Company",
-        "company_about_us": "About Us",
+        "about": "About",
         "company_team": "Team",
         "company_partnerships": "Partnerships",
         "company_dei_statement": "DEI Statement",
